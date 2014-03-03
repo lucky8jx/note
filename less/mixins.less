@@ -1,0 +1,99 @@
+/*
+** CSS3
+*/
+
+// ================================
+// Borders
+// =====================================
+
+.border-radius(@radius: 5px) {
+	-webkit-border-radius: @radius;
+			border-radius: @radius;
+}
+ 
+.box-shadow(@shadow: 0 0 0 1px rgb(240, 240, 240)) {
+	-webkit-box-shadow: @shadow;
+			box-shadow: @shadow;
+}
+
+// ======================================
+// Text effects
+// ========================================
+
+.text-shadow(@shadow: 0 0 0 1px rgb(240, 240, 240)) {
+	-ms-text-shadow: @shadow;
+		text-shadow: @shadow;
+}
+
+// ===========================================
+// User-interface
+// ===========================================
+
+.box-sizing(@box: content-box) {
+	-webkit-box-sizing: @box;
+	   -moz-box-sizing: @box;
+			box-sizing: @box;
+}
+
+//============================================
+// Others
+//================================================
+
+.transition(@property: all, @duration: 300ms, @func: ease, @delay: 0s) {
+	-webkit-transition: @property @duration @func @delay;
+	   -moz-transition: @property @duration @func @delay;
+		-ms-transition: @property @duration @func @delay;
+		 -o-transition: @property @duration @func @delay;
+			transition: @property @duration @func @delay;
+}
+
+.transform(@scaleX: 1, @scaleY: 1, @rotate: 0deg, @xpx: 0, @ypx: 0, @xdeg: 0, @ydeg: 0) {
+	-webkit-transform: scaleX(@scaleX) scaleY(@scaleY) rotate(@rotate) translateX(@xpx) translateY(@ypx) skewX(@xdeg) skewY(@ydeg);
+	   -moz-transform: scaleX(@scaleX) scaleY(@scaleY) rotate(@rotate) translateX(@xpx) translateY(@ypx) skewX(@xdeg) skewY(@ydeg);
+		-ms-transform: scaleX(@scaleX) scaleY(@scaleY) rotate(@rotate) translateX(@xpx) translateY(@ypx) skewX(@xdeg) skewY(@ydeg);
+		 -o-transform: scaleX(@scaleX) scaleY(@scaleY) rotate(@rotate) translateX(@xpx) translateY(@ypx) skewX(@xdeg) skewY(@ydeg);
+			transform: scaleX(@scaleX) scaleY(@scaleY) rotate(@rotate) translateX(@xpx) translateY(@ypx) skewX(@xdeg) skewY(@ydeg);
+}
+
+// =====================================================
+// Gradient
+// ======================================================
+
+// vertical
+
+.vertical(@img: '../img/bg.png', @start: rgb(100, 100, 100); @middle: rgb(150, 150, 150); @end: rgb(200, 200, 200)) {
+	background-image: url(@img);
+	background-color: @start; /* Old browsers */
+	background-image: url(@img) -moz-linear-gradient(top, @start 0%, @middle 50%, @end 100%); /* FF3.6+ */
+	background-image: url(@img) -webkit-gradient(linear, left top, left bottom, color-stop(0%, @start), color-stop(50%, @middle), color-stop(100%, @end)); /* Chrome, Safari4+ */
+	background-image: url(@img) -webkit-linear-gradient(top, @start 0%, @middle 50%, @end 100%); /* Chrome10+, Safari5.1+ */
+	background-image: url(@img) -o-linear-gradient(top, @start 0%, @middle 50%, @end 100%); /* Opera 11.10+ */
+	background-image: url(@img) -ms-linear-gradient(top, @start 0%, @middle 50%, @end 100%); /* IE10+ */
+	background-image: url(@img)  linear-gradient(to bottom, @start 0%, @middle 50%, @end 100%); /* W3C */
+}
+
+// horizontal
+
+.horizontal(@img: '../img/bg.png', @start: rgb(100, 100, 100), @middle: rgb(150, 150, 150), @end: rgb(200, 200, 200)) {
+	background-image: url(@img);
+	background-color: @start; /* Old browsers */
+	background-image: url(@img), -moz-linear-gradient(left, @start 0%, @middle 50%, @end 100%); /* FF3.6+ */
+	background-image: url(@img), -webkit-gradient(linear, left top, right top, color-stop(0%, @start), color-stop(50%, @middle), color-stop(100%, @end)); /* Chrome, Safari4+ */
+	background-image: url(@img), -webkit-linear-gradient(left, @start 0%, @middle 50%, @end 100%); /* Chrome10+, Safari5.1+ */
+	background-image: url(@img), -o-linear-gradient(left, @start 0%, @middle 50%, @end 100%); /* Opera 11.10+ */
+	background-image: url(@img), -ms-linear-gradient(left, @start 0%, @middle 50%, @end 100%); /* IE10+ */
+	background-image: url(@img), linear-gradient(to right, @start 0%, @middle 50%, @end 100%); /* W3C */
+}
+
+// radial
+
+.radial(@img: '/img/bg.png', @start: rgb(100, 100, 100), @middle: rgb(150, 150, 150), @end: rgb(200, 200, 200)) {
+	background-image: url(@img);
+	background-color: @start; /* Old browsers */
+	background-image: url(@img), -moz-radial-gradient(center, ellipse cover, @start 0%, @middle 50%, @end 100%); /* FF3.6+ */
+	background-image: url(@img), -webkit-gradient(radial, center center, 0px, center center, color-stop(0%, @start), color-stop(50%, @middle), color-stop(100%, @end)); /* Chrome, Safari4+ */
+	background-image: url(@img), -webkit-radial-gradient(center, ellipse cover, @start 0%, @middle 50%, @end 100%); /* Chrome10+, Safari5.1+ */
+	background-image: url(@img), -o-radial-gradient(center, ellipse cover, @start 0%, @middle 50%, @end 100%); /* Opera 11.10+ */
+ 	background-image: url(@img), -ms-radial-gradient(center, ellipse cover, @start 0%, @middle 50%, @end 100%); /* IE10+ */
+	background-image: url(@img), radial-gradient(ellipse at center, @start 0%, @middle 50%, @end 100%); /* W3C */
+}
